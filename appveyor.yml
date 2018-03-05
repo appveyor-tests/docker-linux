@@ -1,0 +1,7 @@
+services:
+  - docker
+
+test_script:
+  - docker run hello-world
+
+build: off
