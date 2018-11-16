@@ -1,3 +1,9 @@
+init:
+  - appveyor version
+  - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
+  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
+  - sh: lsb_release -d
+
 services:
   - docker
 
