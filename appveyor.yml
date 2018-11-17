@@ -9,5 +9,6 @@ services:
 
 test_script:
   - docker run hello-world
+  - docker build -t friendlyhello .
 
 build: off
