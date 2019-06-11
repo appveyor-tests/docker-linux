@@ -10,5 +10,7 @@ services:
 test_script:
   - docker run hello-world
   - docker build -t friendlyhello .
+  - docker images
+  - docker system df
 
 build: off
