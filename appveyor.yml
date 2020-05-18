@@ -9,6 +9,8 @@ services:
   - docker
 
 test_script:
+  - docker version
+  - docker info
   - docker run hello-world
   - docker build -t friendlyhello .
   - docker images
