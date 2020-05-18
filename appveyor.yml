@@ -4,7 +4,8 @@ init:
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
   - sh: lsb_release -d
-  - sh: modprobe -r overlay && modprobe overlay redirect_dir=off
+  - sh: sudo modprobe -r overlay
+  - sh: sudo modprobe overlay redirect_dir=off
   
 services:
   - docker
