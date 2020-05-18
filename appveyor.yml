@@ -4,10 +4,9 @@ init:
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
   - sh: lsb_release -d
-#  - sh: sudo modprobe -r overlay && sudo modprobe overlay redirect_dir=off
   #- sh: cat /etc/modules-load.d/modules.conf
-  - sh: ls /etc/modules-load.d
-  - sh: ls -al /etc/modprobe.d
+  #- sh: ls /etc/modules-load.d
+  #- sh: ls -al /etc/modprobe.d
   #- sh: lsmod
   
 services:
