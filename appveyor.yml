@@ -15,8 +15,9 @@ services:
 test_script:
   - docker version
   - sh: |
-      DOCKER_INFO = $(docker info)
-      echo $DOCKER_INFO | grep -q 'Native Overlay Diff: true' && echo 'matched'
+      DOCKER_INFO=$(docker info)
+      echo $DOCKER_INFO
+      echo $DOCKER_INFO | grep -q 'Native Overlay Diff: true' || exit 2
   - docker run hello-world
   - docker build -t friendlyhello .
   - docker images
